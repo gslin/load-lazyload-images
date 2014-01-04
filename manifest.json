@@ -3,6 +3,12 @@
     "name": "Load Lazyload",
     "version": "0.1",
     "description": "Load lazyload images automatically.",
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["load-lazyload.js"]
+        }
+    ],
     "permissions": [
         "http://*/*",
         "https://*/*"
