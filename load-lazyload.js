@@ -1,5 +1,5 @@
 (function(){
-    var imgs = document.getElementsByTagName('imgs');
+    var imgs = document.getElementsByTagName('img');
     var imgs_size = imgs.length;
     var url;
 
