@@ -8,6 +8,6 @@ Currently we support two types of lazyload plugin:
 * LazyloadImages (YUI)
 
 License
-=======
+-------
 
 The BSD 3-Clause License.  Please read LICENSE file.
