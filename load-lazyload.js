@@ -10,6 +10,8 @@
             el.setAttribute('src', url);
         } else if (url = el.getAttribute('data-src')) {
             el.setAttribute('src', url);
+        } else if (url = el.getAttribute('file')) {
+            el.setAttribute('src', url);
         }
     }
 })();
