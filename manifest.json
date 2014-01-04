@@ -2,5 +2,9 @@
     "manifest_version": 2,
     "name": "Load Lazyload",
     "version": "0.1",
-    "description": "Load lazyload images automatically."
+    "description": "Load lazyload images automatically.",
+    "permissions": [
+        "http://*/*",
+        "https://*/*"
+    ]
 }
