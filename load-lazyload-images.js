@@ -1,17 +1,17 @@
-(function(){
-    var imgs = document.getElementsByTagName('img');
-    var imgs_size = imgs.length;
-    var url;
+(() => {
+    'use strict';
 
-    for (var i = 0; i < imgs_size; i++) {
-        var el = imgs[i];
+    const imgs = document.getElementsByTagName('img');
 
-        if (url = el.getAttribute('data-original')) {
-            el.setAttribute('src', url);
-        } else if (url = el.getAttribute('data-src')) {
-            el.setAttribute('src', url);
-        } else if (url = el.getAttribute('file')) {
-            el.setAttribute('src', url);
+    for (const img of imgs) {
+        var url;
+
+        if (url = img.getAttribute('data-original')) {
+            img.setAttribute('src', url);
+        } else if (url = img.getAttribute('data-src')) {
+            img.setAttribute('src', url);
+        } else if (url = img.getAttribute('file')) {
+            img.setAttribute('src', url);
         }
     }
 })();
