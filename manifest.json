@@ -1,7 +1,7 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Load Lazyload Images",
-    "version": "0.2021.0901.0",
+    "version": "0.2022.0502.0",
     "description": "Load lazyload images automatically.",
     "content_scripts": [
         {
@@ -9,8 +9,7 @@
             "js": ["load-lazyload-images.js"]
         }
     ],
-    "permissions": [
-        "http://*/*",
-        "https://*/*"
+    "host_permissions": [
+        "*://*/*"
     ]
 }
