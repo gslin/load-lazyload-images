@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const clean = function(el){
+  const clean = el => {
     const imgs = el.querySelectorAll('img');
 
     for (const img of imgs) {
