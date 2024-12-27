@@ -5,7 +5,7 @@
     const imgs = el.querySelectorAll('img');
 
     for (const img of imgs) {
-      var url;
+      let url;
 
       if (img.getAttribute('loading')) {
         img.removeAttribute('loading');
