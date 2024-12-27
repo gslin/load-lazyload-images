@@ -1,23 +1,23 @@
 (() => {
   'use strict';
 
-  const clean = el => {
-    const imgs = el.querySelectorAll('img');
+  const clean = img => {
+    // Process image tag only.
+    if (img.tagName !== 'IMG') {
+      return;
+    }
 
-    for (const img of imgs) {
-      let url;
+    if (img.getAttribute('loading')) {
+      img.removeAttribute('loading');
+    }
 
-      if (img.getAttribute('loading')) {
-        img.removeAttribute('loading');
-      }
-
-      if (url = img.getAttribute('data-original')) {
-        img.setAttribute('src', url);
-      } else if (url = img.getAttribute('data-src')) {
-        img.setAttribute('src', url);
-      } else if (url = img.getAttribute('file')) {
-        img.setAttribute('src', url);
-      }
+    let url;
+    if (url = img.getAttribute('data-original')) {
+      img.setAttribute('src', url);
+    } else if (url = img.getAttribute('data-src')) {
+      img.setAttribute('src', url);
+    } else if (url = img.getAttribute('file')) {
+      img.setAttribute('src', url);
     }
   };
 
@@ -27,6 +27,7 @@
       if (mut.type !== "childList") {
         return;
       }
+
       clean(mut.target);
     });
   });
