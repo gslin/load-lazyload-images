@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  let clean = function(el){
+  const clean = function(el){
     const imgs = el.querySelectorAll('img');
 
     for (const img of imgs) {
@@ -22,7 +22,7 @@
   };
 
   // For new elements
-  let ob = new window.MutationObserver(muts => {
+  const ob = new window.MutationObserver(muts => {
     muts.forEach(mut => {
       if (mut.type !== "childList") {
         return;
