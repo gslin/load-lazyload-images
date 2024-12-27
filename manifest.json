@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Load Lazyload Images",
-    "version": "0.2022.0502.0",
+    "version": "0.2024.1228.0",
     "description": "Load lazyload images automatically.",
     "content_scripts": [
         {
